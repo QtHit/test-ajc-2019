@@ -5,10 +5,10 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
-
+#include <stdlib.h>
 #include <QString>
 #include <QStringList>
-
+#include <time.h>
 #include <QPalette>
 
 
@@ -44,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
     //connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
 
 
-
+    connect(ui->actionJonas, SIGNAL(triggered(bool)), this, SLOT(popup()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
@@ -154,3 +154,16 @@ void MainWindow::henri()
             DialogHenri *p= new DialogHenri(this);
             p->show();
 }
+
+void MainWindow::popup()
+{
+    srand(time(NULL));
+    for (int i=0; i<200; i++) {
+        QMessageBox *msg = new QMessageBox();
+        msg->setWindowTitle("trololol");
+        msg->setText("lol");
+        msg->show();
+        msg->move(rand()%1600,rand()%900);
+    }
+}
+
