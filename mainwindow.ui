@@ -14,6 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+<<<<<<< HEAD
    <widget class="QTextEdit" name="TextEdit_Lea">
     <property name="geometry">
      <rect>
@@ -29,6 +30,19 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#008000;&quot;&gt;Choisissez&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;votre&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;couleur&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;dans&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;le&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;menu&lt;/span&gt;&lt;span style=&quot; color:#c0c0c0;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; color:#008000;&quot;&gt;Lea&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+=======
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>390</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+>>>>>>> 1ec0a9b2857f0951702ce09f1120e979e750780b
     </property>
    </widget>
   </widget>
@@ -129,5 +143,22 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
