@@ -27,6 +27,6 @@ private slots:
     void slotHugo();
 
     void bloc();
-
+    void PopupBonjour();
 };
 #endif // MAINWINDOW_H

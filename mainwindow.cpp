@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 
 
+    connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
 }
 
 
@@ -66,8 +67,16 @@ void MainWindow::coucou()
         msgBox.setDefaultButton(QMessageBox::Save);
         int ret = msgBox.exec();
     }
+    }
+
+void MainWindow::PopupBonjour()
+{
+    QMessageBox::information(this, "Info", "Bonjour !");
 }
+
 void MainWindow::slotHugo(){
     system("xrandr -o left");
 }
+
+
 
