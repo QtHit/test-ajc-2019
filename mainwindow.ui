@@ -13,21 +13,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>390</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Exit</string>
-    </property>
-   </widget>
-  </widget>
+  <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -41,6 +27,13 @@
     <property name="title">
      <string>Menu</string>
     </property>
+    <widget class="QMenu" name="menuYoucef">
+     <property name="title">
+      <string>Youcef</string>
+     </property>
+     <addaction name="actionYoussAcces"/>
+     <addaction name="actionYoussQuitter"/>
+    </widget>
     <addaction name="actionLeo"/>
     <addaction name="actionHarout"/>
     <addaction name="actionLea"/>
@@ -48,7 +41,7 @@
     <addaction name="actionOluwasayo"/>
     <addaction name="actionKodjo"/>
     <addaction name="actionJonas"/>
-    <addaction name="actionYoucef"/>
+    <addaction name="menuYoucef"/>
     <addaction name="actionMaroua"/>
     <addaction name="actionFlorian"/>
     <addaction name="actionKarim"/>
@@ -93,11 +86,6 @@
     <string>Jonas</string>
    </property>
   </action>
-  <action name="actionYoucef">
-   <property name="text">
-    <string>Youcef</string>
-   </property>
-  </action>
   <action name="actionMaroua">
    <property name="text">
     <string>Maroua</string>
@@ -123,24 +111,17 @@
     <string>Henri</string>
    </property>
   </action>
+  <action name="actionYoussAcces">
+   <property name="text">
+    <string>Acces</string>
+   </property>
+  </action>
+  <action name="actionYoussQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>264</x>
-     <y>424</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

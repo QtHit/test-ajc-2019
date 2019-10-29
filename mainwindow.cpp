@@ -5,6 +5,7 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include<QPainter>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 
-    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+    connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
@@ -82,8 +83,9 @@ void MainWindow::bloc()
 void MainWindow::SansAction()
     {
 
+
         QMessageBox msgBox(this);
-        msgBox.setText("ok");
+        msgBox.setText("NoNoNoooooooo");
         msgBox.exec();
 
     }
