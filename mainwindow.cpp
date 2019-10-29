@@ -5,18 +5,29 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QString>
+#include <QStringList>
+
 #include <QPalette>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
+    //ui->comboBox->addItems(nom_ajc);
 
+    connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
 
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
@@ -29,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
 
 
 
@@ -50,6 +62,8 @@ void MainWindow::ActionInna()
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
+
+
 }
 
 
@@ -62,6 +76,7 @@ void MainWindow::AfficheQ()
         "Selectionnez votre Couleur",
         QColorDialog::DontUseNativeDialog
     );
+
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
@@ -103,7 +118,15 @@ void MainWindow::slotHugo(){
 
 }
 
+
+void MainWindow::Afficher()
+{
+    ui->label->setText("C'est Kodjo");
+
+}
+
 void MainWindow::PopupBonjour()
+
 {
 
     QMessageBox::information(this, "Info", "Bonjour !");
