@@ -102,7 +102,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
-    system("firefox https://www.youtube.com/watch?v=i5sqJNFFwqc");
+    system("firefox https://www.youtube.com/watch?v=yxxeBlu93ZM");
     qDebug() << "It's me Mario";
 }
 
