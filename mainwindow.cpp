@@ -81,7 +81,8 @@ void MainWindow::slotHugo(){
 
 void MainWindow::Afficher()
 {
-    this->close();
+    ui->label->setText("C'est Kodjo");
+
 }
 
 void MainWindow::henri()
