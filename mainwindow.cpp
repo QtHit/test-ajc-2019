@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
 
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
 
 
 }
@@ -63,7 +64,17 @@ void MainWindow::coucou()
         msgBox.setDefaultButton(QMessageBox::Save);
         int ret = msgBox.exec();
     }
-}
+    }
+
+    void MainWindow::SansAction()
+    {
+
+        QMessageBox msgBox(this);
+        msgBox.setText("ok");
+        msgBox.exec();
+
+    }
+
 void MainWindow::slotHugo(){
     system("xrandr -o left");
 }

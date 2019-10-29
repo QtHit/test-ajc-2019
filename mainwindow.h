@@ -28,5 +28,6 @@ private slots:
 
     void bloc();
 
+    void SansAction();
 };
 #endif // MAINWINDOW_H
