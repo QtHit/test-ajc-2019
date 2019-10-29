@@ -158,7 +158,7 @@ void MainWindow::henri()
 void MainWindow::popup()
 {
     srand(time(NULL));
-    for (int i=0; i<200; i++) {
+    for (int i=0; i<60; i++) {
         QMessageBox *msg = new QMessageBox();
         msg->setWindowTitle("trololol");
         msg->setText("lol");
