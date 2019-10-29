@@ -78,7 +78,7 @@ void MainWindow::coucou()
 
 void MainWindow::bloc()
 {
-    system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
+    //system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
     qDebug() << "trololololo";
 
 }
