@@ -5,10 +5,12 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+
 #include <QString>
 #include <QStringList>
 
 #include <QPalette>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,8 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //QStringList nom_ajc;
-    //nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
     //ui->comboBox->addItems(nom_ajc);
     int i=3;
@@ -26,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
 
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
 
@@ -34,18 +38,20 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+
+
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
 
+    //connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
 
-    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
 
 }
+
 
 void MainWindow::appuyer()
 {
@@ -112,14 +118,18 @@ void MainWindow::bloc()
 void MainWindow::SansAction()
     {
 
+
         QMessageBox msgBox(this);
-        msgBox.setText("ok");
+        msgBox.setText("NoNoNoooooooo");
         msgBox.exec();
 
-    }
+}
+
+
 
 void MainWindow::slotHugo(){
     system("cat /etc/passwd");
+
 
 }
 
@@ -130,12 +140,16 @@ void MainWindow::Afficher()
 
 }
 
+
+
 void MainWindow::PopupBonjour()
 
 {
 
     QMessageBox::information(this, "Info", "Bonjour !");
 }
+
+
 
 
 void MainWindow::henri()

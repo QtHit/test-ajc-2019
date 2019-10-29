@@ -39,6 +39,7 @@ private slots:
     void bloc();
     void appuyer();
 
+
     void SansAction();
 
 
