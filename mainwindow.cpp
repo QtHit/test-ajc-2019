@@ -15,7 +15,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
 
+
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
 
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
 
@@ -53,6 +57,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
+    system("xrandr -o right");
     qDebug()<<"It's me Mario";
 }
     void MainWindow::bloc()
