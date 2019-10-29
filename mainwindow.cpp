@@ -18,6 +18,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+//    QStringList nom_ajc;
+//    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+//    ui->comboBox->addItems(nom_ajc);
     //QStringList nom_ajc;
     //nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
@@ -26,23 +30,22 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
-
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
-
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
+
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
 
     connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
-    connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
+
+    connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
 
