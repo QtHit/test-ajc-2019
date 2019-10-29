@@ -16,11 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
-
-
-
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
 
@@ -29,15 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-
-}
-
-
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
-
-
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
 }
 
@@ -55,8 +44,7 @@ MainWindow::~MainWindow()
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
-
-void MainWindow::bloc()
+}
 
 void MainWindow::AfficheQ()
 {
@@ -86,10 +74,6 @@ void MainWindow::coucou()
 void MainWindow::slotHugo(){
     system("xrandr -o left");
 }
-
-
-    void MainWindow::slotHugo(){
-    close();
 
 
 void MainWindow::henri()
