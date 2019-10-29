@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "dialoghenri.h"
 #include <QColor>
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
-    connect(ui->textEdit_Lea,SIGNAL(textChanged()),this,SLOT(RickAstley()));
 
 
 }
@@ -65,8 +65,11 @@ void MainWindow::AfficheQ()
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
-
-
+       QPalette palette;
+       palette.setColor(QPalette::Background,color_pen);
+       ui->centralwidget->setAutoFillBackground(true);
+       ui->centralwidget->setPalette(palette);
+       ui->centralwidget->show();
 
     }
 }
@@ -93,10 +96,7 @@ void MainWindow::SansAction()
 
 }
 
-void MainWindow::RickAstley()
-{
-    system("firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-}
+
 
 void MainWindow::slotHugo(){
     system("cat /etc/passwd");
@@ -105,6 +105,7 @@ void MainWindow::slotHugo(){
 
 void MainWindow::PopupBonjour()
 {
+
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
@@ -113,5 +114,6 @@ void MainWindow::PopupBonjour()
 
 void MainWindow::henri()
 {
-    qDebug() << "je détéste git";
+            DialogHenri *p= new DialogHenri(this);
+            p->exec();
 }
