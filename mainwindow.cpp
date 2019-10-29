@@ -5,6 +5,7 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -64,8 +65,11 @@ void MainWindow::AfficheQ()
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
-
-
+       QPalette palette;
+       palette.setColor(QPalette::Background,color_pen);
+       ui->centralwidget->setAutoFillBackground(true);
+       ui->centralwidget->setPalette(palette);
+       ui->centralwidget->show();
 
     }
 }
