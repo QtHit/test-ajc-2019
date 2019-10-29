@@ -25,8 +25,8 @@ HEADERS += \
     dialoghenri.h
 
 FORMS += \
-    mainwindow.ui \
-    dialoghenri.ui
+    dialoghenri.ui \
+    mainwindow.ui
 
 
 # Default rules for deployment.
