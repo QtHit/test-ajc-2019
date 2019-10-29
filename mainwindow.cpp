@@ -52,6 +52,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
+    system("xrandr -o right");
     qDebug()<<"It's me Mario";
 }
     void MainWindow::bloc()
