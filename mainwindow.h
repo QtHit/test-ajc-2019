@@ -31,7 +31,7 @@ private slots:
 
 
     void oluwasayo();
-
+    void popup();
     void ActionInna();
     void slotHugo();
     void henri();
