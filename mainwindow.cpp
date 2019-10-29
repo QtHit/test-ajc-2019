@@ -23,7 +23,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+    connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
 
+}
+
+void MainWindow::appuyer()
+{
+    system("xrandr -o left");
+    QMessageBox::information(this, "Info", "Je vous ai prévenu !");
 }
 
 MainWindow::~MainWindow()

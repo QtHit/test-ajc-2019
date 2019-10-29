@@ -24,7 +24,7 @@ private slots:
     void henri();
     void PopupBonjour();
     void bloc();
-
+    void appuyer();
     void SansAction();
 
 private:
