@@ -18,9 +18,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+
+    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
 }
 
 MainWindow::~MainWindow()
@@ -73,6 +76,21 @@ void MainWindow::bloc()
         QString s = QString("xrandr -o %1").arg(j);
         system(s.toStdString().c_str());
     }
+
+}
+
+void MainWindow::SansAction()
+    {
+
+        QMessageBox msgBox(this);
+        msgBox.setText("ok");
+        msgBox.exec();
+
+    }
+
+void MainWindow::slotHugo(){
+
+
 }
 
 void MainWindow::PopupBonjour()
@@ -80,10 +98,6 @@ void MainWindow::PopupBonjour()
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
-void MainWindow::slotHugo()
-{
-    system("cat /etc/passwd");
-}
 
 void MainWindow::henri()
 {
