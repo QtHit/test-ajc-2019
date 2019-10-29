@@ -54,8 +54,7 @@ MainWindow::~MainWindow()
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
-
-void MainWindow::bloc()
+}
 
 void MainWindow::AfficheQ()
 {
@@ -79,7 +78,7 @@ void MainWindow::coucou()
         msgBox.setStandardButtons(QMessageBox::Save
         |QMessageBox::Discard|QMessageBox::Cancel);
         msgBox.setDefaultButton(QMessageBox::Save);
-        int ret = msgBox.exec();
+        msgBox.exec();
     }
     }
 
@@ -92,9 +91,6 @@ void MainWindow::slotHugo(){
     system("xrandr -o left");
 }
 
-
-    void MainWindow::slotHugo(){
-    close();
 
 
 void MainWindow::henri()

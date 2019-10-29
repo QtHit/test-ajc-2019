@@ -30,7 +30,6 @@ private slots:
     void ActionInna();
     void slotHugo();
     void henri();
-    void bloc();
     void PopupBonjour();
 };
 #endif // MAINWINDOW_H
