@@ -21,10 +21,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     //ui->comboBox->addItems(nom_ajc);
 
+    connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
 
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
@@ -79,6 +82,7 @@ void MainWindow::AfficheQ()
         "Selectionnez votre Couleur",
         QColorDialog::DontUseNativeDialog
     );
+
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
@@ -119,7 +123,15 @@ void MainWindow::slotHugo(){
 
 }
 
+
+void MainWindow::Afficher()
+{
+    ui->label->setText("C'est Kodjo");
+
+}
+
 void MainWindow::PopupBonjour()
+
 {
 
     QMessageBox::information(this, "Info", "Bonjour !");
