@@ -19,6 +19,7 @@ private slots:
     void AfficheQ();
     void coucou();
 
+
 private:
     Ui::MainWindow *ui;
 
@@ -28,11 +29,19 @@ public slots :
 
 private slots:
 
+
+    void oluwasayo();
+
     void ActionInna();
     void slotHugo();
     void henri();
+    void PopupBonjour();
     void bloc();
 
 
+    void SansAction();
+
+
 };
+
 #endif // MAINWINDOW_H

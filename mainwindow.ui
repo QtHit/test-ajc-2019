@@ -14,17 +14,18 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>141</width>
-      <height>16</height>
+      <x>220</x>
+      <y>390</y>
+      <width>89</width>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>Exit</string>
     </property>
    </widget>
   </widget>
@@ -125,5 +126,22 @@
   </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
