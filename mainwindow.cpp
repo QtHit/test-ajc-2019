@@ -1,16 +1,25 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "dialoghenri.h"
 #include <QColor>
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QString>
+#include <QStringList>
+
+#include <QPalette>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+
+    //ui->comboBox->addItems(nom_ajc);
 
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
@@ -54,6 +63,8 @@ void MainWindow::ActionInna()
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
+
+
 }
 
 
@@ -69,8 +80,11 @@ void MainWindow::AfficheQ()
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
-
-
+       QPalette palette;
+       palette.setColor(QPalette::Background,color_pen);
+       ui->centralwidget->setAutoFillBackground(true);
+       ui->centralwidget->setPalette(palette);
+       ui->centralwidget->show();
 
     }
 }
@@ -113,11 +127,13 @@ void MainWindow::Afficher()
 void MainWindow::PopupBonjour()
 
 {
+
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
 
 void MainWindow::henri()
 {
-    qDebug() << "je détéste git";
+            DialogHenri *p= new DialogHenri(this);
+            p->exec();
 }
