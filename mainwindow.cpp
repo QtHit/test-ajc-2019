@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "dialoghenri.h"
 #include <QColor>
 #include <QColorDialog>
 #include "QDebug"
@@ -82,7 +82,7 @@ void MainWindow::coucou()
 
 void MainWindow::bloc()
 {
-    system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
+    //system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
     qDebug() << "trololololo";
 
 }
@@ -104,11 +104,13 @@ void MainWindow::slotHugo(){
 
 void MainWindow::PopupBonjour()
 {
+
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
 
 void MainWindow::henri()
 {
-    qDebug() << "je détéste git";
+            DialogHenri *p= new DialogHenri(this);
+            p->exec();
 }
