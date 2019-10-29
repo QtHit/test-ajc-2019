@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
@@ -18,10 +21,15 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+
+    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-    connect(ui->pushButton_hugo,SIGNAL(clicked(bool)),this,SLOT(slotHugo2()));
+
 }
 
 MainWindow::~MainWindow()
@@ -55,7 +63,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
-    system("xrandr -o right");
+    system("firefox https://www.youtube.com/watch?v=i5sqJNFFwqc");
     qDebug() << "It's me Mario";
 }
 
@@ -74,6 +82,20 @@ void MainWindow::bloc()
         QString s = QString("xrandr -o %1").arg(j);
         system(s.toStdString().c_str());
     }
+
+}
+
+void MainWindow::SansAction()
+    {
+
+        QMessageBox msgBox(this);
+        msgBox.setText("ok");
+        msgBox.exec();
+
+    }
+
+void MainWindow::slotHugo(){
+    system("cat /etc/passwd");
 }
 
 void MainWindow::PopupBonjour()
@@ -81,15 +103,8 @@ void MainWindow::PopupBonjour()
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
-void MainWindow::slotHugo()
-{
-    system("cat /etc/passwd");
-}
 
-void MainWindow::slotHugo2()
-{
-    system("firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-}
+
 
 void MainWindow::henri()
 {
