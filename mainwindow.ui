@@ -13,6 +13,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+
   <widget class="QWidget" name="centralwidget">
 
    <widget class="QPushButton" name="pushButton">
@@ -100,6 +101,7 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
   </widget>
+
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -113,6 +115,13 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Menu</string>
     </property>
+    <widget class="QMenu" name="menuYoucef">
+     <property name="title">
+      <string>Youcef</string>
+     </property>
+     <addaction name="actionYoussAcces"/>
+     <addaction name="actionYoussQuitter"/>
+    </widget>
     <addaction name="actionLeo"/>
     <addaction name="actionHarout"/>
     <addaction name="actionLea"/>
@@ -120,7 +129,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionOluwasayo"/>
     <addaction name="actionKodjo"/>
     <addaction name="actionJonas"/>
-    <addaction name="actionYoucef"/>
+    <addaction name="menuYoucef"/>
     <addaction name="actionMaroua"/>
     <addaction name="actionFlorian"/>
     <addaction name="actionKarim"/>
@@ -173,11 +182,6 @@ p, li { white-space: pre-wrap; }
     <string>Jonas</string>
    </property>
   </action>
-  <action name="actionYoucef">
-   <property name="text">
-    <string>Youcef</string>
-   </property>
-  </action>
   <action name="actionMaroua">
    <property name="text">
     <string>Maroua</string>
@@ -203,6 +207,14 @@ p, li { white-space: pre-wrap; }
     <string>Henri</string>
    </property>
   </action>
+
+  <action name="actionYoussAcces">
+   <property name="text">
+    <string>Acces</string>
+   </property>
+  </action>
+
+
   <action name="actionHelp">
    <property name="text">
     <string>Help</string>
@@ -211,10 +223,14 @@ p, li { white-space: pre-wrap; }
   <action name="actionVersion">
    <property name="text">
     <string>Version</string>
+
    </property>
   </action>
  </widget>
  <resources/>
+
+ <connections/>
+
  <connections>
   <connection>
    <sender>pushButton</sender>
@@ -249,4 +265,5 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
  </connections>
+
 </ui>

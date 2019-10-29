@@ -5,10 +5,12 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+
 #include <QString>
 #include <QStringList>
 
 #include <QPalette>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -31,7 +33,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
+
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+    connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
+
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
@@ -103,8 +112,9 @@ void MainWindow::bloc()
 void MainWindow::SansAction()
     {
 
+
         QMessageBox msgBox(this);
-        msgBox.setText("ok");
+        msgBox.setText("NoNoNoooooooo");
         msgBox.exec();
 
     }
