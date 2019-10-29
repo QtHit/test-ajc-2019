@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
 
-
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
@@ -61,6 +60,8 @@ void MainWindow::AfficheQ()
         "Selectionnez votre Couleur",
         QColorDialog::DontUseNativeDialog
     );
+    QMainWindow::setStyleSheet(QString("background-color:%1;").arg(color_pen));
+    QMainWindow::setAutoFillBackground( true );
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
