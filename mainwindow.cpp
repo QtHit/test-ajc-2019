@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
@@ -18,9 +21,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+
+    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -35,10 +45,12 @@ void MainWindow::ActionInna()
     qDebug() << "Salut, c'est Inna\n";
 }
 
+
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
 }
+
 
 void MainWindow::AfficheQ()
 {
@@ -49,12 +61,18 @@ void MainWindow::AfficheQ()
         "Selectionnez votre Couleur",
         QColorDialog::DontUseNativeDialog
     );
-}
+    if (color_pen.isValid())
+    {
+      // ui->TextEdit_Lea->setTextColor(color_pen);
 
+
+
+    }
+}
 
 void MainWindow::coucou()
 {
-    system("xrandr -o right");
+    system("firefox https://www.youtube.com/watch?v=i5sqJNFFwqc");
     qDebug() << "It's me Mario";
 }
 
@@ -62,6 +80,22 @@ void MainWindow::bloc()
 {
     system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
     qDebug() << "trololololo";
+
+}
+
+void MainWindow::SansAction()
+    {
+
+        QMessageBox msgBox(this);
+        msgBox.setText("ok");
+        msgBox.exec();
+
+    }
+
+void MainWindow::slotHugo(){
+
+
+
 }
 
 void MainWindow::PopupBonjour()
@@ -69,10 +103,6 @@ void MainWindow::PopupBonjour()
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
-void MainWindow::slotHugo()
-{
-    system("cat /etc/passwd");
-}
 
 void MainWindow::henri()
 {

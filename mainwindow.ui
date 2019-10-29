@@ -27,6 +27,16 @@
      <string>Exit</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>60</y>
+      <width>341</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -55,7 +65,15 @@
     <addaction name="actionHugo"/>
     <addaction name="actionHenri"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionVersion"/>
+   </widget>
    <addaction name="menuMenu"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLeo">
@@ -121,6 +139,16 @@
   <action name="actionHenri">
    <property name="text">
     <string>Henri</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
    </property>
   </action>
  </widget>
