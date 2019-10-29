@@ -19,5 +19,6 @@ private:
     Ui::MainWindow *ui;
 private slots:
     void ActionInna();
+    void slotHugo();
 };
 #endif // MAINWINDOW_H
