@@ -6,10 +6,18 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::Afficher()
+{
+    this->close();
 }
 

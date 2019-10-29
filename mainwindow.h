@@ -17,5 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+public slots :
+    void Afficher(void);
+
 };
 #endif // MAINWINDOW_H
