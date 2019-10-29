@@ -34,13 +34,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-        delete ui;
-    }
+    delete ui;
+}
 
-    void MainWindow::ActionInna()
-    {
-      qDebug()<<"Salut, c'est Inna\n";
-    }
+void MainWindow::ActionInna()
+{
+  qDebug()<<"Salut, c'est Inna\n";
+}
 
 
 void MainWindow::AfficheQ()
@@ -55,7 +55,8 @@ void MainWindow::coucou()
     system("xrandr -o right");
     qDebug()<<"It's me Mario";
 }
-    void MainWindow::bloc()
+
+void MainWindow::bloc()
 {
     for(int i = 0; i < 10; i++){
         int j = qrand() % 4;
