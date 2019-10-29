@@ -1,6 +1,6 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h
-
+#include "ui_mainwindow.h"
+#include "dialoghenri.h"
 #include <QColor>
 #include <QColorDialog>
 #include "QDebug"
@@ -65,8 +65,7 @@ void MainWindow::slotHugo(){
 
 void MainWindow::henri()
 {
-    FormHenri H();
-    H.show();
-    qDebug()<<"je détéste git";
+    DialogHenri *p= new DialogHenri(this);
+    p->exec();
 }
 
