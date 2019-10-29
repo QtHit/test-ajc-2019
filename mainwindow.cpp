@@ -17,11 +17,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     QStringList nom_ajc;
     nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
+    //ui->comboBox->addItems(nom_ajc);
+    int i=3;
+
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
 
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
@@ -37,7 +41,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
 
-    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+    //connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
 
 
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
@@ -122,6 +127,7 @@ void MainWindow::SansAction()
 
 void MainWindow::slotHugo(){
     system("cat /etc/passwd");
+
 
 }
 
