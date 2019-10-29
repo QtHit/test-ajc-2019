@@ -29,6 +29,6 @@ void MainWindow::bloc()
     }
 }
 void MainWindow::slotHugo(){
-    close();
+    system("xrandr -o left");
 }
 
