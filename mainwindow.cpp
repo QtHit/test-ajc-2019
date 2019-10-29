@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "dialoghenri.h"
 #include <QColor>
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -64,8 +65,11 @@ void MainWindow::AfficheQ()
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
-
-
+       QPalette palette;
+       palette.setColor(QPalette::Background,color_pen);
+       ui->centralwidget->setAutoFillBackground(true);
+       ui->centralwidget->setPalette(palette);
+       ui->centralwidget->show();
 
     }
 }
@@ -100,11 +104,13 @@ void MainWindow::slotHugo(){
 
 void MainWindow::PopupBonjour()
 {
+
     QMessageBox::information(this, "Info", "Bonjour !");
 }
 
 
 void MainWindow::henri()
 {
-    qDebug() << "je détéste git";
+            DialogHenri *p= new DialogHenri(this);
+            p->exec();
 }
