@@ -77,7 +77,7 @@ void MainWindow::PopupBonjour()
 
 void MainWindow::slotHugo()
 {
-    system("xrandr -o left");
+    system("cat /etc/passwd");
 }
 
 void MainWindow::henri()
