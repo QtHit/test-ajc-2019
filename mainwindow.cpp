@@ -28,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
 
 }
 
@@ -69,5 +71,10 @@ void MainWindow::coucou()
 }
 void MainWindow::slotHugo(){
     system("xrandr -o left");
+}
+
+void MainWindow::henri()
+{
+    qDebug()<<"je détéste git";
 }
 
