@@ -24,23 +24,15 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
-
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
-
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-
-
-
     connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
-    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
 
