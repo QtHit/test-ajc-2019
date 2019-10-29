@@ -15,11 +15,24 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void AfficheQ();
+    void coucou();
+
 private:
     Ui::MainWindow *ui;
 
+
 public slots :
     void Afficher(void);
+
+private slots:
+
+    void ActionInna();
+    void slotHugo();
+
+    void bloc();
+
 
 };
 #endif // MAINWINDOW_H
