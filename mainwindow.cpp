@@ -66,9 +66,7 @@ void MainWindow::coucou()
         int ret = msgBox.exec();
     }
 }
-
-    void MainWindow::slotHugo(){
-    close();
-
+void MainWindow::slotHugo(){
+    system("xrandr -o left");
 }
 
