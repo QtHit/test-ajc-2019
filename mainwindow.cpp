@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "ui_mainwindow.h
 
 #include <QColor>
 #include <QColorDialog>
@@ -65,6 +65,8 @@ void MainWindow::slotHugo(){
 
 void MainWindow::henri()
 {
+    FormHenri H();
+    H.show();
     qDebug()<<"je détéste git";
 }
 
