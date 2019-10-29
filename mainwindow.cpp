@@ -5,13 +5,21 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+#include <QString>
+#include <QStringList>
+
 #include <QPalette>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+
+    ui->comboBox->addItems(nom_ajc);
 
 
 
@@ -50,6 +58,8 @@ void MainWindow::ActionInna()
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
+
+
 }
 
 
