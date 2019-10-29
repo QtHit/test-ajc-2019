@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
@@ -41,6 +44,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
+    system("xrandr -o right");
     qDebug()<<"It's me Mario";
 }
 
@@ -56,9 +60,7 @@ void MainWindow::bloc()
         int ret = msgBox.exec();
     }
 }
-
-    void MainWindow::slotHugo(){
-    close();
-
+void MainWindow::slotHugo(){
+    system("xrandr -o left");
 }
 
