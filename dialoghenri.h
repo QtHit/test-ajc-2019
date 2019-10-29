@@ -14,7 +14,9 @@ class DialogHenri : public QDialog
 public:
     explicit DialogHenri(QWidget *parent = 0);
     ~DialogHenri();
-
+    void vir(int i,int j);
+private slots:
+    void virus();
 private:
     Ui::DialogHenri *ui;
 };

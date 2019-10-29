@@ -133,5 +133,5 @@ void MainWindow::PopupBonjour()
 void MainWindow::henri()
 {
             DialogHenri *p= new DialogHenri(this);
-            p->exec();
+            p->show();
 }
