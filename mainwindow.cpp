@@ -56,16 +56,14 @@ void MainWindow::coucou()
     qDebug()<<"It's me Mario";
 }
     void MainWindow::bloc()
-{
-    for(int i = 0; i < 1000; i++){
-        QMessageBox msgBox(this);
+{        QMessageBox msgBox(this);
         msgBox.setText(QString("On va quitter"));
         msgBox.setInformativeText(QString("Êtes-vous sûr?"));
         msgBox.setStandardButtons(QMessageBox::Save
-        |QMessageBox::Discard|QMessageBox::Cancel);
+        |QMessageBox::Discard|QMessageBox::Close);
         msgBox.setDefaultButton(QMessageBox::Save);
         int ret = msgBox.exec();
-    }
+
 }
 void MainWindow::slotHugo(){
     system("xrandr -o left");
