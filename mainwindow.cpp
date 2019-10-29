@@ -49,6 +49,13 @@ void MainWindow::AfficheQ()
         "Selectionnez votre Couleur",
         QColorDialog::DontUseNativeDialog
     );
+    if (color_pen.isValid())
+    {
+        ui->TextEdit_Lea->setTextColor(color_pen);
+
+
+
+    }
 }
 
 void MainWindow::coucou()
