@@ -14,23 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
-
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
-
-
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
-
-
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
-
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-
-
 }
 
 
