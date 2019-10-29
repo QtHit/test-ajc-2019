@@ -18,7 +18,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     QStringList nom_ajc;
     nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
-
     ui->comboBox->addItems(nom_ajc);
 
 

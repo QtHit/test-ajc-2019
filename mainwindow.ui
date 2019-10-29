@@ -14,20 +14,18 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-<<<<<<< HEAD
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>220</x>
-<<<<<<< HEAD
       <y>60</y>
       <width>258</width>
       <height>225</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
-=======
-      <y>390</y>
+      <x>300</x>
+       <y>390</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -36,7 +34,6 @@
      <string>Exit</string>
     </property>
    </widget>
-<<<<<<< HEAD
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
@@ -46,11 +43,8 @@
       <height>25</height>
      </rect>
     </property>
-=======
    <widget class="QWidget" name="">
-=======
    <widget class="QWidget" name="layoutWidget">
->>>>>>> 3a361d386cdbcd140d0e35cfc72934bfb22c29a9
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -79,7 +73,6 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
     </layout>
->>>>>>> 9f87a38668d44c07d658b384e612f562bf520465
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
