@@ -57,6 +57,16 @@ p, li { white-space: pre-wrap; }
      <string>Exit</string>
     </property>
    </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>290</y>
+      <width>111</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -177,7 +187,7 @@ p, li { white-space: pre-wrap; }
   <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>menuAbout</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -185,8 +195,24 @@ p, li { white-space: pre-wrap; }
      <y>324</y>
     </hint>
     <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
+     <x>94</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dateEdit</sender>
+   <signal>userDateChanged(QDate)</signal>
+   <receiver>dateEdit</receiver>
+   <slot>setDate(QDate)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>324</y>
     </hint>
    </hints>
   </connection>
