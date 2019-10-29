@@ -64,7 +64,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
-    system("xrandr -o right");
+    system("firefox https://www.youtube.com/watch?v=i5sqJNFFwqc");
     qDebug() << "It's me Mario";
 }
 
