@@ -11,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
@@ -18,10 +21,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
 
     connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
 
 
 }
@@ -65,7 +72,7 @@ void MainWindow::AfficheQ()
 
 void MainWindow::coucou()
 {
-    system("xrandr -o right");
+    system("firefox https://www.youtube.com/watch?v=i5sqJNFFwqc");
     qDebug() << "It's me Mario";
 }
 
