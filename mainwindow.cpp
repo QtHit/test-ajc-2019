@@ -1,12 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
+    connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 }
 
 MainWindow::~MainWindow()
@@ -25,5 +27,8 @@ void MainWindow::bloc()
         msgBox.setDefaultButton(QMessageBox::Save);
         int ret = msgBox.exec();
     }
+}
+void MainWindow::slotHugo(){
+    close();
 }
 

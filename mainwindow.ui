@@ -23,7 +23,7 @@
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuJonas">
+   <widget class="QMenu" name="menuMenu">
     <property name="title">
      <string>Menu</string>
     </property>
@@ -41,7 +41,7 @@
     <addaction name="actionHugo"/>
     <addaction name="actionHenri"/>
    </widget>
-   <addaction name="menuJonas"/>
+   <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLeo">
@@ -67,11 +67,6 @@
   <action name="actionOluwasayo">
    <property name="text">
     <string>Oluwasayo</string>
-   </property>
-  </action>
-  <action name="actionHarout_2">
-   <property name="text">
-    <string>Harout</string>
    </property>
   </action>
   <action name="actionKodjo">

@@ -11,6 +11,9 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+private slots:
+    void slotHugo();
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
