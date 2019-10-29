@@ -60,14 +60,14 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton_appuyer">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>280</y>
-      <width>191</width>
-      <height>61</height>
+      <x>330</x>
+      <y>290</y>
+      <width>341</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
-     <string>ne pas appuyer!!</string>
+     <string>Ne pas appuyer !!</string>
     </property>
    </widget>
   </widget>
