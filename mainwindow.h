@@ -22,6 +22,10 @@ private slots:
 private:
     Ui::MainWindow *ui;
 private slots:
+    void oluwasayo();
+
+
+    void bloc();
 
     void ActionInna();
     void slotHugo();
