@@ -11,22 +11,26 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-private slots:
-    void slotHugo();
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void coucou();
+
 private:
     Ui::MainWindow *ui;
 private slots:
-<<<<<<< HEAD
-
     void oluwasayo();
 
-=======
+
     void bloc();
->>>>>>> c302e3bac3ab36b1d099471aeddf68f2c24f7be5
+
+    void ActionInna();
+    void slotHugo();
+
+    void bloc();
+
+
 };
 #endif // MAINWINDOW_H

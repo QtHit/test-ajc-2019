@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
+
+
 #include "QDebug"
 
 #include <QMessageBox>
@@ -12,24 +15,47 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
 
+
+
+    connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
+
+    connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
+
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
+
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 
+
 }
 
+
+
+}
 MainWindow::~MainWindow()
 {
-    delete ui;
-}
+        delete ui;
+    }
 
+    void MainWindow::ActionInna()
+    {
+      qDebug()<<"Salut, c'est Inna\n";
+    }
 
 void MainWindow::oluwasayo()
 {
     qDebug() << "L'action de Monsieur Loto contre le monde";
 
 void MainWindow::bloc()
+
+void MainWindow::coucou()
+{
+    qDebug()<<"It's me Mario";
+}
+    void MainWindow::bloc()
+
 {
     for(int i = 0; i < 1000; i++){
         QMessageBox msgBox(this);
@@ -41,7 +67,8 @@ void MainWindow::bloc()
         int ret = msgBox.exec();
     }
 }
-void MainWindow::slotHugo(){
+
+    void MainWindow::slotHugo(){
     close();
 
 }
