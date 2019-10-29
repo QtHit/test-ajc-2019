@@ -63,7 +63,7 @@ void MainWindow::AfficheQ()
     );
     if (color_pen.isValid())
     {
-      // ui->TextEdit_Lea->setTextColor(color_pen);
+       ui->textEdit_Lea->setTextColor(color_pen);
 
 
 
