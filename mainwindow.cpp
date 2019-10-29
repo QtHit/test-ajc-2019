@@ -5,43 +5,74 @@
 #include <QColorDialog>
 #include "QDebug"
 #include <QMessageBox>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a4ba26ed8104b512874f245358d0e7f2d68ae76
 #include <QString>
 #include <QStringList>
 
 #include <QPalette>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a4ba26ed8104b512874f245358d0e7f2d68ae76
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //QStringList nom_ajc;
-    //nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
+<<<<<<< HEAD
     //ui->comboBox->addItems(nom_ajc);
 
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+=======
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+    ui->comboBox_loto->addItems(nom_ajc);
+
+    connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
+>>>>>>> 8a4ba26ed8104b512874f245358d0e7f2d68ae76
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
     connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
     connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
     connect(ui->actionFlorian, SIGNAL(triggered(bool)), this, SLOT(bloc()));
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
-    connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
+
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+    connect(ui->actionYoussAcces, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
+
+
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
 
 }
 
+<<<<<<< HEAD
+
+
+=======
 void MainWindow::appuyer()
 {
     system("xrandr -o left");
     QMessageBox::information(this, "Info", "Je vous ai prévenu !");
+>>>>>>> 8a4ba26ed8104b512874f245358d0e7f2d68ae76
 }
 
 MainWindow::~MainWindow()
@@ -103,15 +134,24 @@ void MainWindow::bloc()
 void MainWindow::SansAction()
     {
 
+
         QMessageBox msgBox(this);
-        msgBox.setText("ok");
+        msgBox.setText("NoNoNoooooooo");
         msgBox.exec();
 
-    }
+}
+
+
 
 void MainWindow::slotHugo(){
+    system("cat /etc/passwd");
+
+}
 
 
+void MainWindow::Afficher()
+{
+    ui->label->setText("C'est Kodjo");
 
 }
 
@@ -128,6 +168,8 @@ void MainWindow::PopupBonjour()
 
     QMessageBox::information(this, "Info", "Bonjour !");
 }
+
+
 
 
 void MainWindow::henri()
