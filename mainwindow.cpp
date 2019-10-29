@@ -83,7 +83,7 @@ void MainWindow::coucou()
 
 void MainWindow::bloc()
 {
-    system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
+    //system("firefox --new-tab https://www.youtube.com/watch?v=oavMtUWDBTM &");
     qDebug() << "trololololo";
 
 }
@@ -106,7 +106,7 @@ void MainWindow::slotHugo(){
 
 void MainWindow::Afficher()
 {
- //   ui->label->setText("C'est Kodjo");
+    ui->label->setText("C'est Kodjo");
 
 }
 
