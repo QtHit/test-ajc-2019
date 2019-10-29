@@ -28,13 +28,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionYoucef, SIGNAL(triggered(bool)),this, SLOT(SansAction()));
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
-<<<<<<< HEAD
+
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->pushButton_appuyer,SIGNAL(clicked(bool)),this,SLOT(appuyer()));
-=======
-
-
->>>>>>> d0d3f63e60751fcf18645595fbf90e8a1c44eaaa
 
 }
 
