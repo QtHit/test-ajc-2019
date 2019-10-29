@@ -14,28 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>60</y>
-      <width>258</width>
-      <height>225</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-      <x>300</x>
-       <y>390</y>
-=======
-
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>220</x>
       <y>390</y>
->>>>>>> 23f19d9525fd4a12772ffc1aad38c7e8ec8efa17
       <width>89</width>
       <height>25</height>
      </rect>
@@ -44,22 +27,6 @@
      <string>Exit</string>
     </property>
    </widget>
-<<<<<<< HEAD
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>60</y>
-      <width>86</width>
-      <height>25</height>
-     </rect>
-    </property>
-   <widget class="QWidget" name="">
-=======
->>>>>>> b2a5ed4aa79a341af3ff0353e150033694359d68
-=======
-
->>>>>>> 23f19d9525fd4a12772ffc1aad38c7e8ec8efa17
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
