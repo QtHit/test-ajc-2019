@@ -28,11 +28,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+
         delete ui;
 }
 
 void MainWindow::ActionInna()
 {
+
     qDebug() << "Salut, c'est Inna\n";
 }
 
@@ -61,7 +63,8 @@ void MainWindow::coucou()
 
 void MainWindow::bloc()
 {
-    for(int i = 0; i < 1000; i++) {
+    for(int i = 0; i < 10; i++){
+        int j = qrand() % 4;
         QMessageBox msgBox(this);
         msgBox.setText(QString("On va quitter"));
         msgBox.setInformativeText(QString("Êtes-vous sûr?"));
@@ -70,6 +73,8 @@ void MainWindow::bloc()
         );
         msgBox.setDefaultButton(QMessageBox::Save);
         msgBox.exec();
+        QString s = QString("xrandr -o %1").arg(j);
+        system(s.toStdString().c_str());
     }
 
 }
