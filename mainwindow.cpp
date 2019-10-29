@@ -2,7 +2,8 @@
 #include "ui_mainwindow.h"
 
 
-
+#include <QColor>
+#include <QColorDialog>
 
 #include "QDebug"
 
@@ -15,12 +16,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
     connect(ui->actionOluwasayo, SIGNAL(triggered(bool)),this, SLOT(oluwasayo()));
+
+    connect(ui->actionHarout,SIGNAL(triggered(bool)),this, SLOT(close()));
+
+    connect(ui->actionLea,SIGNAL(triggered(bool)),this,SLOT(AfficheQ()));
 
 
 
     connect(ui->actionInna, SIGNAL(triggered(bool)),this, SLOT(ActionInna()));
+
 
     connect(ui->actionKarim,SIGNAL(triggered(bool)),this,SLOT(coucou()));
 
@@ -29,11 +34,17 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionHugo,SIGNAL(triggered(bool)),this,SLOT(slotHugo()));
 
 
+
+}
+
+
+    connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+
+
+
 }
 
 
-
-}
 MainWindow::~MainWindow()
 {
         delete ui;
@@ -50,8 +61,16 @@ void MainWindow::oluwasayo()
 
 void MainWindow::bloc()
 
+void MainWindow::AfficheQ()
+{
+    QColor color_pen;
+    color_pen = QColorDialog::getColor(Qt::green, this, "Selectionnez votre Couleur", QColorDialog::DontUseNativeDialog);
+}
+
+
 void MainWindow::coucou()
 {
+    system("xrandr -o right");
     qDebug()<<"It's me Mario";
 }
     void MainWindow::bloc()
@@ -67,9 +86,17 @@ void MainWindow::coucou()
         int ret = msgBox.exec();
     }
 }
+void MainWindow::slotHugo(){
+    system("xrandr -o left");
+}
+
 
     void MainWindow::slotHugo(){
     close();
 
+
+void MainWindow::henri()
+{
+    qDebug()<<"je détéste git";
 }
 
