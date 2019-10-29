@@ -18,15 +18,18 @@ public:
 private slots:
     void AfficheQ();
     void coucou();
-
-private:
-    Ui::MainWindow *ui;
-private slots:
-
+    void oluwasayo();
     void ActionInna();
     void slotHugo();
     void henri();
+    void PopupBonjour();
     void bloc();
 
+    void SansAction();
+
+private:
+    Ui::MainWindow *ui;
+
 };
+
 #endif // MAINWINDOW_H
