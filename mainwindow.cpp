@@ -8,13 +8,16 @@
 #include <QString>
 #include <QStringList>
 
+#include <QPalette>
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     QStringList nom_ajc;
-    nom_ajc <<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
     ui->comboBox->addItems(nom_ajc);
 
@@ -72,8 +75,11 @@ void MainWindow::AfficheQ()
     if (color_pen.isValid())
     {
        ui->textEdit_Lea->setTextColor(color_pen);
-
-
+       QPalette palette;
+       palette.setColor(QPalette::Background,color_pen);
+       ui->centralwidget->setAutoFillBackground(true);
+       ui->centralwidget->setPalette(palette);
+       ui->centralwidget->show();
 
     }
 }
