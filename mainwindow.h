@@ -17,5 +17,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+private slots:
+    void ActionInna();
 };
 #endif // MAINWINDOW_H
