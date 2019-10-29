@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
 
+    connect(ui->textEdit_Lea,SIGNAL(textChanged()),this,SLOT(RickAstley()));
+
 
 }
 
@@ -89,7 +91,12 @@ void MainWindow::SansAction()
         msgBox.setText("ok");
         msgBox.exec();
 
-    }
+}
+
+void MainWindow::RickAstley()
+{
+    system("firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+}
 
 void MainWindow::slotHugo(){
     system("cat /etc/passwd");

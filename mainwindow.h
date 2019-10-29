@@ -26,6 +26,7 @@ private slots:
     void bloc();
 
     void SansAction();
+    void RickAstley();
 
 private:
     Ui::MainWindow *ui;
