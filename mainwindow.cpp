@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionLeo, SIGNAL(triggered(bool)), this, SLOT(PopupBonjour()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
     connect(ui->actionHenri,SIGNAL(triggered(bool)),this,SLOT(henri()));
+    connect(ui->pushButton_hugo,SIGNAL(clicked(bool)),this,SLOT(slotHugo2()));
 }
 
 MainWindow::~MainWindow()
@@ -83,6 +84,11 @@ void MainWindow::PopupBonjour()
 void MainWindow::slotHugo()
 {
     system("cat /etc/passwd");
+}
+
+void MainWindow::slotHugo2()
+{
+    system("firefox https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 }
 
 void MainWindow::henri()

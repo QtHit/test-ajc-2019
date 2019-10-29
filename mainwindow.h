@@ -22,6 +22,7 @@ private slots:
     void bloc();
     void ActionInna();
     void slotHugo();
+    void slotHugo2();
     void henri();
     void PopupBonjour();
 
