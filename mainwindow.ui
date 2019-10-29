@@ -73,10 +73,20 @@ p, li { white-space: pre-wrap; }
    <widget class="QDateEdit" name="dateEdit">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>290</y>
+      <x>100</x>
+      <y>260</y>
       <width>111</width>
       <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_loto">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>300</y>
+      <width>86</width>
+      <height>25</height>
      </rect>
     </property>
    </widget>

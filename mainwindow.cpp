@@ -17,13 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-//    QStringList nom_ajc;
-//    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
-//    ui->comboBox->addItems(nom_ajc);
-    //QStringList nom_ajc;
-    //nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
-
-    //ui->comboBox->addItems(nom_ajc);
+    QStringList nom_ajc;
+    nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
+    ui->comboBox_loto->addItems(nom_ajc);
 
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
