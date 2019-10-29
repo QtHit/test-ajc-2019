@@ -14,6 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+<<<<<<< HEAD
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
@@ -44,6 +45,8 @@
      </rect>
     </property>
    <widget class="QWidget" name="">
+=======
+>>>>>>> b2a5ed4aa79a341af3ff0353e150033694359d68
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
