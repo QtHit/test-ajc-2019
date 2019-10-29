@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     //nom_ajc<<"Loto"<<"Inna"<<"Lea"<<"Jonas"<<"Kodjo"<<"Harout"<<"Yousef"<<"Maroua"<<"Florian"<<"Hugo"<<"Karim"<<"Henri"<<"Leo";
 
     //ui->comboBox->addItems(nom_ajc);
+    int i=3;
 
     connect(ui->actionKodjo, SIGNAL(triggered(bool)), this, SLOT(Afficher()));
 
@@ -118,8 +119,7 @@ void MainWindow::SansAction()
     }
 
 void MainWindow::slotHugo(){
-
-
+    system("cat /etc/passwd");
 
 }
 
